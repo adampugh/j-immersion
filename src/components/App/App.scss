@@ -1,0 +1,39 @@
+#App {
+    background: url(../../assets/images/terrace-house-aloha-state.jpg) no-repeat center center fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.blur {
+    background: rgba(28, 28, 28, 0.2); // Make sure this color has an opacity of less than 1
+    backdrop-filter: blur(15px); // This be the blur
+    height: 100vh;
+    width: 100%;
+}
+
+.content {
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    max-width: 30vw;
+}
+
+.content__bg-image {
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.content__controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
