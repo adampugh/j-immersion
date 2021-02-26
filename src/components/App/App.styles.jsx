@@ -26,7 +26,8 @@ export const ContentDiv = styled.div`
     margin-left: auto;
     margin-right: auto;
     top: 0;
-    max-width: 35vw;
+    width: 650px;
+    max-width: 100%;
 `;
 
 export const ContentImg = styled.img`
