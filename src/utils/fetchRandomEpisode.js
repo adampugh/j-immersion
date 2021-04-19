@@ -5,15 +5,11 @@ const getRandomIdAndImage = (episodeId, episodeArray) => {
     return filteredEpisodeArray[Math.floor(Math.random() * filteredEpisodeArray.length)];
 };
 
-const fetchRandomEpisode = async (episodeId, episodeArray) => {
+const fetchRandomEpisode = (episodeId, episodeArray) => {
     const { id, img } = getRandomIdAndImage(episodeId, episodeArray);
     const storage = firebase.storage();
     const pathReference = storage.ref(`${id}.mp3`);
-    return pathReference.getDownloadURL().then((url) => {
-        const newEpisode = { id, img, audio: url };
-        console.log(newEpisode);
-        return newEpisode;
-    });
+    return pathReference.getDownloadURL().then((url) => ({ id, img, audio: url }));
 };
 
 export default fetchRandomEpisode;
